@@ -6,6 +6,8 @@ This is a simple example project that can run either with [altcloud](https://alt
 
 If you have [node](https://nodejs.org/) installed, you can install altcloud with `npm i -g altcloud`.
 
+(For the cron job to succeed–it just creates fake data periodically–you'll need node installed.)
+
 Alternatively, you can download the appropriate altcloud build for your platform and save it in this directory or somewhere in your `PATH`.
 
 - [Mac](altcloud.io/macos/altcloud)

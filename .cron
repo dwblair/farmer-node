@@ -1,0 +1,3 @@
+get-data:
+  command: ./make-fake-data.js
+  pattern: every minute

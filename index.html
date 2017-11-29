@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href=
+"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2MQERH5DwABuAE8RBfWTAAAAABJRU5ErkJggg==">
+    <title>farm node</title>
+  </head>
+  <body>
+    <h1>Node 1</h1>
+    <pre id="data"></pre>
+  </body>
+  <script>
+    async function readFile(path) {
+      if (typeof DatArchive !== 'undefined' && window.location.protocol === 'dat:') {
+        var archive = new DatArchive(window.location.toString())
+        var data = await archive.readFile(path)
+        return data
+      } else {
+        var data = await fetch(path).then(res => res.text())
+        return data
+      }
+    }
+    async function main () {
+      var data = await readFile('/data.txt')
+      document.getElementById('data').innerText = data
+    }
+    main()
+  </script>
+</html>
